@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<queries>
+
+  <query id="create_User_table">
+  
+       <![CDATA[
+       
+       CREATE TABLE users(
+       
+       UserId   varchar(12) NOT NULL,
+       UserFistName varchar(50),
+       UserLastName varchar(50),
+       UserContactNo varchar(10),
+       UserEmail varchar(50),
+       UserAdress varchar(100),
+       UserPassword varchar(50),       
+       
+       PRIMARY KEY (UserId)
+       
+       
+       );
+       
+        
+       
+       ]]>
+       
+       
+  
+  </query>
+  
+  <query id="insert_User">
+  
+       <![CDATA[
+      
+      INSERT INTO users(UserId , UserFistName,UserLastName,UserContactNo,UserEmail,UserAdress,UserPassword)
+      VALUES (?,?,?,?,?,?,?);
+
+       ]]>
+       
+       
+  
+  </query>
+  
+   <query id="get_user-idu">
+  
+       <![CDATA[
+      
+      SELECT UserId  from users;
+      
+       ]]>
+       
+       
+  
+  </query>
+  
+
+
+</queries>
